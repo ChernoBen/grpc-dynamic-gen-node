@@ -2,7 +2,11 @@ syntax = "proto3";
 package greet;
 
 service GreetService{
+    //unary
     rpc Greet(GreetRequest)returns(GreetResponse){};
+    //streaming
+    rpc GreetManyTimes(GreetManyTimesRequest)returns(stream GreetManyTimesResponse){};
+    
 }
 
 message Greeting{
@@ -15,5 +19,13 @@ message GreetRequest{
 }
 
 message GreetResponse{
-    string result =1;
+    string result = 1;
+}
+
+message GreetManyTimesRequest{
+    Greeting greeting = 1;
+}
+
+message GreetManyTimesResponse{
+    string result = 1;
 }
