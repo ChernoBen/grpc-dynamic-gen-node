@@ -8,7 +8,7 @@
     "client": "node ./client/client.js"
   },
   "dependencies": {
-    "@grpc/grpc-js": "^1.4.1",
+    "@grpc/grpc-js": "^1.8.8",
     "@grpc/proto-loader": "^0.6.6",
     "grpc": "^1.24.11"
   }
